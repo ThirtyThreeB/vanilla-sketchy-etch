@@ -24,6 +24,7 @@ let makeBoxes = (numberOfBoxes) => {
 		divBox.classList.add('boxes');
 		divBox.style.width = `${sideLength}px`;
 		divBox.style.height = `${sideLength}px`;
+		divBox.addEventListener("mouseover", changeBoxColor);
 
 		const container = document.querySelector('#container'); 
 		container.appendChild(divBox);  
@@ -39,15 +40,16 @@ let playGame = () => {
 };
 
 
-
 let reset = () => {	
-	
-  // while (container.firstChild) {
-  // 	let unDiv = document.querySelector('.boxes');
-		// container.removeChild(unDiv);
-		document.getElementById("container").remove();
-	// }
-	document.getElementById("boxMaker").disabled = false;
+	document.getElementById("container").remove();
+  document.getElementById("boxMaker").disabled = false;
+};
+
+
+let changeBoxColor = (e) => {
+	e.target.classList.add('highlight');
+console.log(e.propertyName);
+
 };
 
 let boxMaker = document.querySelector('#boxMaker');
@@ -55,4 +57,21 @@ boxMaker.addEventListener('click', playGame);
 
 let resetBtn = document.querySelector('#resetBtn');
 resetBtn.addEventListener('click', reset);
+
+
+
+//document.getElementById("container").addEventListener('onmouseover', changeBoxColor);  //document?
+
+
+// document.getElementById("demo").addEventListener("mouseover", mouseOver);
+// document.getElementById("demo").addEventListener("mouseout", mouseOut);
+
+// let  mouseOver() {
+// 	console.log("moo");
+//     document.getElementById("demo").style.color = "red";
+// }
+
+// function mouseOut() {
+//     document.getElementById("demo").style.color = "black";
+// }
 
