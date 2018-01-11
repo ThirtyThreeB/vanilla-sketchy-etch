@@ -1,23 +1,80 @@
+h1 {
+  margin: 5px;
+  text-shadow:
+    -1px -1px 0 purple,
+    1px -1px 0 purple,
+    -1px 1px 0 purple,
+    1px 1px 0 purple;
+
+}
+
+.bg { 
+    background-image: url("https://images.unsplash.com/photo-1508402476522-c77c2fa4479d?auto=format&fit=crop&w=1350&q=80"); 
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} 
+
+body {
+	background-color: black;
+	background-image: url("https://images.unsplash.com/photo-1508402476522-c77c2fa4479d?auto=format&fit=crop&w=1350&q=80");
+	background-repeat: no-repeat;
+
+}
+
+#boxInput {
+	/*color: white;*/
+	font-family: 'Freckle Face', cursive;
+  font-size: 3em;
+  color: #ffc600;
+  text-align: center;
+  text-shadow: 0 0 5rem #b38600;
+  opacity: 0.7;
+  text-align: center;
+  margin: 25px;
+	padding: 20px;
+  /*border: 1px solid red;*/
+}
+
+.btn {
+  background-color: #ffc600;
+    border: none;
+    color: purple;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Freckle Face', cursive;
+    font-size: 25px;
+    margin: 2px 2px;
+    cursor: pointer;
+    border-radius: 15px;
+    border: 1px solid purple;
+}
+
 #container {
+	margin: auto;
 	width: 500px;
 	height: 500px;
-	border: 1px solid pink;
-	/*margin: auto;
-	display: inline-block;
-*/
-
+	border: 7px solid #330033;
+	box-shadow: 0 0 5rem purple;
+  opacity: 0.5;
 }
 
 .boxes {
 	float: left;
-	border: 1px solid purple;
+	border: 1px solid #330033;
 	box-sizing: border-box;
 	transition: all .2s ease;
+  opacity: 0.8;
 }
 
 .highlight {
-	 transform: scale(1.05);
+	transform: scale(1.2);
   border-color: #ffc600;
   box-shadow: 0 0 1rem #ffc600;
   background-color: purple;
+  border-radius: 20px;
 }
+
